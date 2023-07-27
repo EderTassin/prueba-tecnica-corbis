@@ -1,0 +1,110 @@
+<div class="container">
+
+  <div class="tabs">
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="perspectives-tab" data-bs-toggle="tab" data-bs-target="#perspectives"
+          type="button" role="tab" aria-controls="perspectives" aria-selected="true">Perspectives</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="objetives-tab" data-bs-toggle="tab" data-bs-target="#objetives" type="button"
+          role="tab" aria-controls="objetives" aria-selected="false">Objetives</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="KPIs-tab" data-bs-toggle="tab" data-bs-target="#KPIs" type="button" role="tab"
+          aria-controls="KPIs" aria-selected="false">KPIs</button>
+      </li>
+    </ul>
+  </div>
+  <div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" id="perspectives" role="tabpanel" aria-labelledby="perspectives-tab">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col" (click)="onSort('id')">#</th>
+            <th scope="col" (click)="onSort('name')">Nombre</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let perspective of perspective">
+            <td style="color: #FF6537;">{{perspective.id}}</td>
+            <td>{{perspective.name}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="tab-pane fade" id="objetives" role="tabpanel" aria-labelledby="objetives-tab">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col" (click)="onSort('id')">#</th>
+            <th scope="col" (click)="onSort('name')">Objetives</th>
+            <th scope="col" (click)="onSort('perspective')">Perspectives</th>
+            <th scope="col" (click)="onSort('code')">Owner</th>
+            <th scope="col" (click)="onSort('description')">Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let objective of objective">
+            <td style="color: #FF6537;">{{objective.id}}</td>
+            <td>{{objective.name}}</td>
+            <td>{{objective.perspective.name}}</td>
+            <td>{{objective.code}}</td>
+            <td>{{objective.description}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="tab-pane fade" id="KPIs" role="tabpanel" aria-labelledby="KPIs-tab">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Dates</th>
+            <th scope="col">Test</th>
+            <th scope="col">Column</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Lorem, ipsum dolor.</td>
+            <td>Lorem, ipsum.</td>
+            <td>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Lorem, ipsum dolor.</td>
+            <td>Lorem, ipsum.</td>
+            <td>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Lorem, ipsum dolor.</td>
+            <td>Lorem, ipsum.</td>
+            <td>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div id="paginator">
+      <nav aria-label="Page navigation">
+        <ul class="pagination justify-content-end">
+          <li class="page-item">
+            <a class="page-link" href="#" aria-label="Previous">
+              <span aria-hidden="true">&laquo;</span>
+            </a>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item">
+            <a class="page-link" href="#" aria-label="Next">
+              <span aria-hidden="true">&raquo;</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>

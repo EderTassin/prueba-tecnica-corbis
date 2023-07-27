@@ -1,0 +1,43 @@
+.sidebar-collapse{
+    width: 60px;
+    height: 90vh;
+    color:aliceblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sidebar-extend{
+    width: 200px;
+    height: 90vh;
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.icons{
+    margin: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.btn-collapse{
+    margin: 1rem;
+}
+
+button {
+    all: unset;
+    cursor: pointer;
+  }
+  
+  button:focus {
+    outline: revert;
+  }
+
+.sidebar-container img{
+    width: 60px;
+    height: 60px;
+}
+  

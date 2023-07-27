@@ -1,0 +1,75 @@
+.container{
+  background-color: #fff !important;
+  height: 88vh;
+}
+
+.comment-compact{
+  width: 40px;
+}
+
+.comment {
+    width: 300px;
+    display: flex;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.comment-container{
+  height: 77vh;
+  overflow-y: auto;
+}
+
+.comment:hover{
+  background-color: #e0e0e0c9;
+}
+  
+  .profile-image {
+    margin-right: 10px;
+  }
+  
+  .profile-image img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+  
+  .comment-details {
+    flex: 1;
+  }
+  
+  .author {
+    font-weight: bold;
+  }
+  
+  .date {
+    font-style: italic;
+  }
+  
+  .comment-text {
+    margin-top: 5px;
+  }
+
+  .comment-details a {
+    cursor: pointer;
+  }
+  
+  button {
+    margin-top: 10px;
+  }
+  
+  .accions-comments{
+    justify-content: space-between;
+    display: flex;
+    
+  }
+
+  .accions-comments p{
+    cursor: pointer;
+  }
+
+  .search-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+  }

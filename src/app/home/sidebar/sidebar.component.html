@@ -1,0 +1,58 @@
+<div class="sidebar-container bg-dark">
+    <img src="https://storage.googleapis.com/www-paredro-com/uploads/2015/08/NARANJA-LOGOS-04-e1439382445805.jpg" alt="">
+    <div *ngIf="collapse" class="sidebar-collapse">
+        <div class="icon-container">
+            <div class="icons">
+                <span class="material-symbols-outlined">favorite</span>
+            </div>
+            <div class="icons">
+                <span class="material-symbols-outlined">error</span>
+            </div>
+            <div class="icons">
+                <span class="material-symbols-outlined">terminal</span>
+            </div>
+            <div class="icons">
+                <span class="material-symbols-outlined">monitoring</span>
+            </div>
+            <div class="icons">
+                <span class="material-symbols-outlined">computer</span>
+            </div>
+
+        </div>
+        <div class="btn-collapse">
+            <button (click)="clickCollapseSidebar()">
+                <span class="material-symbols-outlined">
+                    arrow_forward
+                </span>
+            </button>
+        </div>
+    </div>
+
+    <div *ngIf="!collapse" class="sidebar-extend">
+        <div class="icon-container">
+            <div class="icons">
+                <span class="material-symbols-outlined">favorite</span>Favorites
+            </div>
+            <div class="icons">
+                <span class="material-symbols-outlined">error</span>Errors
+            </div>
+            <div class="icons">
+                <span class="material-symbols-outlined">terminal</span>Terminal
+            </div>
+            <div class="icons">
+                <span class="material-symbols-outlined">monitoring</span> Monitoring
+            </div>
+            <div class="icons">
+                <span class="material-symbols-outlined">computer</span>Computer
+            </div>
+        </div>
+        <div class="btn-collapse">
+            <button (click)="clickCollapseSidebar()">
+                <span class="material-symbols-outlined">
+                    arrow_back
+                </span>
+            </button>
+        </div>
+    </div>
+
+</div>

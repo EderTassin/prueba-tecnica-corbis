@@ -1,0 +1,43 @@
+/* Estilos generales del navbar */
+.navbar {
+    background-color: #FFFFFF !important;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: #F1F1F1 1px solid;
+    align-items: center;
+    padding: 10px;
+    color: 333;
+  }
+  
+  .navbar-left {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-right input {
+    margin-right: 10px;
+    padding: 5px;
+    width: 300px;
+    border: none;
+    border-radius: 5px;
+  }
+  
+
+  .navbar-right {
+    margin-right: 5rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  
+  .navbar-right img {
+    width: 40px;
+    height: 40px;
+    margin-right: .5rem;
+    margin-left: 3rem;
+  }
+  
+  .navbar-right span {
+    font-size: 18px;
+  }
+  

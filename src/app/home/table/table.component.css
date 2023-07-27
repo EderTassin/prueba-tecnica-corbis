@@ -1,0 +1,10 @@
+::ng-deep  #myTab .nav-item .nav-link:not(active){
+    color: #FF6537;
+}
+::ng-deep  #myTab .nav-item .nav-link.active {
+    color: black; 
+}
+
+::ng-deep #paginator .page-item .page-link{
+ color: #FF6537;
+}

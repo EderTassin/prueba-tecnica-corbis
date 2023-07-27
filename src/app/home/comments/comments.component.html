@@ -1,0 +1,38 @@
+<div class="container">
+  <div *ngIf="collapse" class="comment-compact pt-4">
+    <a (click)="clickCollapse()">
+      <span class="material-symbols-outlined">mark_email_unread</span>
+    </a>
+  </div>
+
+  <div *ngIf="!collapse" class="comment-extend">
+    <form (ngSubmit)="addComment()" class="search-container pt-3">
+      <input type="text" class="form-control" [(ngModel)]="newComment" [ngModelOptions]="{ standalone: true }"
+        placeholder="Make a comment" required>
+      <div class="buttons-comments">
+        <button class="btn btn-light" (click)="clickCollapse()" type="submit">Cancel</button>
+        <button class="btn btn-light" type="submit">Submit</button>
+      </div>
+    </form>
+
+    <div class="comment-container">
+      <div *ngFor="let comment of comments" class="comment">
+        <div class="profile-image">
+          <img src="https://xsgames.co/randomusers/avatar.php?g=pixel" alt="Profile Image">
+        </div>
+        <div class="comment-details">
+          <p class="author">{{ comment.author}}<br><span style="font-weight: 200;">{{comment.date | date:
+              'medium'}}</span></p>
+          <p class="comment-text mb-0">{{ comment.comment }}</p>
+          <div class="accions-comments mr-2">
+            <p>Reply</p>
+            <div>
+              <a (click)="editComment(comment)"><span class="material-symbols-outlined">edit</span></a>
+              <a (click)="deleteComment(comment)"><span class="material-symbols-outlined">delete</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
